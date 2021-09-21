@@ -21,10 +21,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Log.d(TAG,"onCreate");
 
-        if (savedInstanceState != null){
-            data = savedInstanceState.getString("Data");
-            Log.d(TAG,data);
-        }
 
         mBtnIntent = findViewById(R.id.buttonNavigateMain2);
 
@@ -74,9 +70,4 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG,"onDestroy");
     }
 
-    @Override
-    protected void onSaveInstanceState(@NonNull Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putString("Data","abc");
-    }
 }
